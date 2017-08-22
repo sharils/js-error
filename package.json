@@ -25,7 +25,7 @@
   },
   "dependencies": {},
   "name": "sharils-try",
-  "description": "sharils-try ===========",
+  "description": "sharils-try",
   "version": "1.0.0",
   "main": "src/index.js",
   "repository": {
