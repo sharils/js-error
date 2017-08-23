@@ -1,4 +1,8 @@
 // @flow
+
+// https://github.com/sharils/js-try/issues/2
+import "babel-polyfill";
+
 import assertLadenErrorClasses from "./assertLadenErrorClasses";
 import assertLength from "./assertLength";
 import { ng, ok } from "./option";

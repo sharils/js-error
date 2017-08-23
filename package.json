@@ -23,7 +23,9 @@
     "jest": "^20.0.4",
     "prettier": "^1.5.3"
   },
-  "dependencies": {},
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  },
   "name": "sharils-try",
   "description": "sharils-try",
   "version": "1.0.0",
