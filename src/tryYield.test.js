@@ -122,14 +122,13 @@ describe("Feature: tryYield", () => {
 
   describe("Scenario: Delegate", () => {
     function* main() {
-      return yield* tryYield([TypeError], yield);
+      return yield* tryYield([TypeError], {});
     }
 
     test("should get option from yield*", () => {
       const expected = {};
 
       const g = main();
-      g.next();
       g.next();
       const { value: [, actual] } = g.next(expected);
 
@@ -140,7 +139,6 @@ describe("Feature: tryYield", () => {
       const expected = {};
 
       const g = main();
-      g.next();
       g.next();
       const { done } = g.next(expected);
 
