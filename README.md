@@ -89,6 +89,36 @@ function* fetchUser(action) {
 
 Note that `` yield call `` becomes `` yield* tryYield ``. And `` call(Api.fetchUser, action.payload.userId) `` is directly wrapped by `` tryYield `` instead of `` tryYield(call, Api.fetchUser, action.payload.userId) ``.
 
+Async/Await
+-----------
+
+There is `` tryAwait `` to do the same things as `` tryCall `` in a async function.
+
+```js
+async function fetchUser(id) {
+    let user;
+    try {
+        user = await fetch(id);
+    } catch (e) {
+        console.log('failed to fetch user');
+    }
+    return user;
+}
+```
+
+Using `` tryAwait ``, this can be written as the following:
+
+```js
+async function fetchUser(url) {
+    const [e, user] = await tryAwait([Error], fetch(id));
+    if (e) {
+        console.log('failed to fetch user');
+        return;
+    }
+    return user;
+}
+```
+
 Test
 ----
 
