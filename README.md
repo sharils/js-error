@@ -61,7 +61,7 @@ The reason there is no flag to tell if there is no error thrown is also because 
 Generator
 ---------
 
-There is `` tryYield `` to do the same thing as `` tryCall `` in a generator.  Let's take the following snippet from redux-saga.
+There is `` tryYield `` to do the same thing as `` tryCall `` in a generator.  Let's take a lookt at the following snippet from redux-saga.
 
 ```js
 function* fetchUser(action) {
