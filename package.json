@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "rm -fr ./build && babel ./src --ignore *.test.js --out-dir ./build && cp ./LICENSE ./README.md ./build && sed 's/src\\///' package.json > ./build/package.json",
+    "build": "rm -fr ./build && babel ./src --ignore *.test.js --out-dir ./build && cp ./LICENSE ./README.md ./build && sed '/\"main\"/s/src\\///' package.json > ./build/package.json",
     "lint": "eslint .",
     "test": "jest"
   },
